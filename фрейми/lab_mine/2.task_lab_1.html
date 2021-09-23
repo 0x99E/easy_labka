@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Лаборатна робота № 1 >>> Умова задачі</title>
+	<script src="jqmin.js"></script>
+	<script src="spoiler.js"></script>
+	<link rel="stylesheet" href="spoiler.css">
+	<script src="/smart/jqmin.js"></script>
+	<script src="/smart/vars.js"></script>
+	<script src="/smart/logic.js"></script>
+</head>
+<body>
+	<h2 style="text-align: center;">Лаборатна робота № 1 >>> Умова задачі<br></h2>
+	<h3 style="text-align: center;">Завдання 1:</h3>
+	<p><br><big>№ 1 - Запрограмувати операції введення з клавіатури та виведення на екран значень змінних різних типів згідно з форматами даних</big></p>
+	<a href="#" class="spoiler-trigger">
+	<span>Cпойлер (таблиця типів):</span></a>
+	<div class="spoiler-block">
+		<table border="1px">
+			<tbody><tr> 
+			  <td width="115"><strong>Тип</strong></td>
+			  <td width="235"><strong>Назва типу</strong></td>
+			  <td width="220"><strong>Обсяг оперативної пам’яті</strong></td>
+			  <td width="220"><strong>Діапазон значень</strong></td>
+			</tr>
+			<tr> 
+			  <td><span class="light">char</span></td>
+			  <td>Цілий тип </td>
+			  <td>8 бітів</td>
+			  <td>-128 ... +127</td>
+			</tr>
+			<tr> 
+			  <td><span class="light">signed char</span></td>
+			  <td>Цілий із знаком </td>
+			  <td>8 бітів</td>
+			  <td>-128 ... +127</td>
+			</tr>
+			<tr> 
+			  <td><span class="light">unsigned char</span></td>
+			  <td>Беззнаковий цілий</td>
+			  <td>8 бітів</td>
+			  <td>0 ... 255</td>
+			</tr>
+			<tr> 
+			  <td><span class="light">short int</span></td>
+			  <td>Цілий короткий</td>
+			  <td>16 бітів</td>
+			  <td>-32768 ... +32767</td>
+			</tr>
+			<tr> 
+			  <td><span class="light">unsigned int</span></td>
+			  <td>Беззнаковий цілий </td>
+			  <td>32 бітів</td>
+			  <td>0 ... 65535</td>
+			</tr>
+			<tr> 
+			  <td><span class="light">int</span></td>
+			  <td>Цілий </td>
+			  <td>32 бітів</td>
+			  <td>-2147483648 ... +2147483647</td>
+			</tr>
+			<tr> 
+			  <td><span class="light">long int</span></td>
+			  <td>Цілий довгий </td>
+			  <td>32 бітів</td>
+			  <td>-2147483648 ... +2147483647</td>
+			</tr>
+			<tr> 
+			  <td><span class="light">unsigned long</span></td>
+			  <td>Цілий довгий беззнаковий</td>
+			  <td>32 бітів</td>
+			  <td>0 ... +429496729</td>
+			</tr>
+			<tr> 
+			  <td><span class="light">float</span></td>
+			  <td>З плаваючою крапкою</td>
+			  <td>32 бітів</td>
+			  <td>3.4 *10^-38 ... 3.4 *10^38</td>
+			</tr>
+			<tr> 
+			  <td><span class="light">double</span></td>
+			  <td>З плаваючою крапкою довгий</td>
+			  <td>64 бітів</td>
+			  <td>1.7 *10^-308 ... 1.7 *10^308</td>
+			</tr>
+			<tr> 
+			  <td><span class="light">long double</span></td>
+			  <td>З плаваючою крапкою довгий</td>
+			  <td>80 бітів</td>
+			  <td>3.4 *10^-4932 ... 3.4 *10^4932</td>
+			</tr>
+		  </tbody></table>
+	</div><br>
+
+	<a href="#" class="spoiler-trigger1"><span>Cпойлер (таблиця функцій):</span></a>
+	<div class="spoiler-block1">
+		<table border="1">
+			<tbody><tr> 
+			  <td style="text-align: center" width="75"> 
+			  <strong>Функція</strong></td>
+			  <td style="text-align: center" width="175"> 
+				<b>Формат введення та виведення</b>
+			  </td>
+			  <td style="text-align: center" width="330"> 
+				<b>Призначення</b>
+			  </td>
+			  <td style="text-align: center" width="219"> 
+				<b>Приклад</b>
+			  </td>
+			  <td style="text-align: center" width="150"> 
+				<b>Заголовний файл</b>
+			  </td>
+			  <td style="text-align: center" width="330"> 
+				<b>Результат, що повертається функцією</b>
+			  </td>
+			</tr>
+			<tr> 
+			  <td>_сprintf()</td>
+			  <td><span class="light">int</span> _cprintf (формат, 
+				apг1, apг2, ...);</td>
+			  <td> Виведення на консоль значень аргументів згідно з форматом виведення. </td>
+			  <td> <span class="light">int</span> с; <br>
+			  _cprint("%d",c);</td>
+			  <td class="name"> сonio.h</td>
+			  <td>Значення типу int, 
+				дорівнює кількості виве-дених символів</td>
+			</tr>
+			<tr> 
+			  <td> _cscanf()</td>
+			  <td> <span class="light">int</span> _cscanf (формат, 
+				арг1,aрг2,...); </td>
+			  <td>Введення з консолі значень змінних згідно з форматом і присвоєння значень аргументам. Аргументами є адреси змінних в оперативній пам’яті. </td>
+			  <td><span class="light">int</span> a; <span class="light">char</span> NAME[5]; <br>
+				_cscanf ("%s", Name); <br>
+				_cscanf ("%d", &amp;a); </td>
+			  <td class="name">сonio.h </td>
+			  <td>Значення типу int дорівнює кількості змінних, що отримали значення. При невдалому скануванні повертається значення EOF</td>
+			</tr>
+			<tr> 
+			  <td> _cputs()</td>
+			  <td> <span class="light">int</span> _cputs (<span class="light">const 
+				char</span> *str);</td>
+			  <td> Виведення на консоль рядка символів. Не додається символ кінця рядка ‘\0’. Borland C++ використовує cputs()</td>
+			  <td> <span class="light">char</span> NAME[5];<br>
+		  _cputs(NAME);<br>
+			  _cputs("Hello");</td>
+			  <td class="name"> conio.h </td>
+			  <td>У випадку успіху повертається 0</td>
+			</tr>
+			<tr> 
+			  <td> _cgets()</td>
+			  <td> <span class="light">char</span> *_cgets (<span class="light">char</span> *str); </td>
+			  <td>Введення з консолі послідовності символів до символу “кінець рядка” (‘\0’)</td>
+			  <td> <span class="light">char</span> a[5];<br>
+		  _cgets(a); </td>
+			  <td class="name">conio.h </td>
+			  <td>Значення типу int, що дорівнює покажчику на символ з індексом 2 (str[2]). </td>
+			</tr>
+			<tr> 
+			  <td> getch()</td>
+			  <td> <span class="light">int</span> getch(<span class="light">void</span>); </td>
+			  <td>Введення символу з консолі без відображення на екрані. Не використовується для Win32</td>
+			  <td> <span class="light">int</span> c; <br>
+			  c=getch(); </td>
+			  <td class="name">conio.h</td>
+			  <td> Код введеного з клавіатури символу</td>
+			</tr>
+			<tr> 
+			  <td> putch()</td>
+			  <td> <span class="light">int</span> putch(<span class="light">int</span> c);</td>
+			  <td>Виведення на консоль символу.  Не використовується для Win32</td>
+			  <td> putch('В'); <br>
+			  putch(getch()); </td>
+			  <td class="name">conio.h</td>
+			  <td> Повертається надрукований символ або значення EOF при невдалому виведенні.</td>
+			</tr>
+			<tr> 
+			  <td> getchar()</td>
+			  <td> <span class="light">int</span> getchar(<span class="light">void</span>); </td>
+			  <td>Введення символу із стандартного вхідного файлу stdin. </td>
+			  <td><span class="light">int</span> ch; <br>
+			  ch=getchar(); </td>
+			  <td class="name">stdio.h </td>
+			  <td>Повертається код введеного символу або значення EOF </td>
+			</tr>
+			<tr> 
+			  <td> putchar()</td>
+			  <td> <span class="light">int</span> putchar(<span class="light">int</span> c); </td>
+			  <td>Повертається символ або значення EOF при невдалому виводу</td>
+			  <td>putchar(getch());</td>
+			  <td class="name"> stdio.h</td>
+			  <td>Повертається символ або значення EOF при невдалому виводу</td>
+			</tr>
+			<tr> 
+			  <td> gets() </td>
+			  <td><span class="light">char</span> *gets (<span class="light">char</span> *s); </td>
+			  <td>Введення із стандартного вхідного файлу stdin рядка і розміщення його по покажчику *s</td>
+			  <td> <span class="light">char</span> line[80]; <br>
+			  gets(line); </td>
+			  <td class="name">stdio.h  </td>
+			  <td> Покажчик на перший символ рядка або NULL при невдалому введенні</td>
+			</tr>
+			<tr> 
+			  <td> puts()</td>
+			  <td> <span class="light">int</span> puts (<span class="light">const char</span> *s);</td>
+			  <td> Виведення у стандартний вихідний файл stdout рядка  і доповнення його символом нового рядка ‘\n’ </td>
+			  <td> <span class="comments"><span class="light"><span class="name"><span class="light">char</span></span></span></span> b[80]; <br>
+			  puts(b); </td>
+			  <td class="name">stdio.h  </td>
+			  <td> Повертається невід’ємне значення або EOF при невдалому виведенні</td>
+			</tr>
+			<tr> 
+			  <td> рrintf()</td>
+			  <td> <span class="light">int</span> printf (<span class="light">const 
+				char</span> *format, argument, ...); </td>
+			  <td>Виведення у стандартний вихідний файл stdout  значень аргументів згідно з форматом виведення</td>
+			  <td><span class="light">int</span> a; <span class="light">float</span> b; <br>
+				<span class="light">char</span> str[10];<br>
+				printf("%d %f %s", a,b,str); </td>
+			  <td class="name">stdio.h </td>
+			  <td>Повертається кількість виведених байтів або від’ємне значення при невдалому виведенні</td>
+			</tr>
+			<tr> 
+			  <td> scanf()</td>
+			  <td> <span class="light">int</span> scanf (<span class="light">const char</span> *format, address, ...); </td>
+			  <td> Введення із стандартного вхідного файлу значень змінних згідно з форматом і розміщення їх за вказаними адресами у оперативній пам’яті.</td>
+			  <td> <span class="light">char</span> AME[20]; <span class="light">int</span> a; <br>
+				scanf("%s", AME); <br>
+				scanf("%d", &amp;a); </td>
+			  <td class="name"> stdio.h</td>
+			  <td> Повертається кількість змінних, що отримали значення. При невдалому скануванні повертається значення EOF  </td>
+			</tr>
+			<tr> 
+			  <td> sprintf()</td>
+			  <td> <span class="light">int</span> sprintf (<span class="light">char</span> *str, <span class="light">const char</span> *format, argument, ...);</td>
+			  <td> Розміщення у рядку символів значень аргументів із пам’яті згідно з шаблоном. Використовується для перетворення типів даних </td>
+			  <td><p><span class="light">char</span> str[3];<br>
+			  sprintf(str,"%d", 
+				13);</p></td>
+			  <td class="name">stdio.h</td>
+			  <td> Повертається кількість виведених символів. </td>
+			</tr>
+			<tr> 
+			  <td> sscanf()</td>
+			  <td> <span class="light">int</span> sscanf (рядок, фор-мат, 
+				арг1, ...); </td>
+			  <td>Читання із рядка у адреси пам’яті згідно з форматом шаблонів. Використовується для перетворення типів </td>
+			  <td><span class="light">int</span> a; <span class="light">float</span> b; <span class="light">char</span> str[5]; <br>
+				sscanf(str,"%d%", &amp;a, &amp;b); </td>
+			  <td class="name">stdio.h</td>
+			  <td> Повертається кількість введених символів або EOF при невдалому введенні</td>
+			</tr>
+		  </tbody></table>
+	</div>
+
+	
+
+	<h3 style="text-align: center;"><br>Завдання 2:</h3>
+	<big><p class="task_2"></p></big>
+	
+	<p><big>Довільні значення змінних A,B,C,D ввести з клавіатури.</big></p>
+
+	
+
+	<h3 style="text-align: center;"><br>Завдання 3:</h3>
+	<p><b><big>Написати програму, що розв'язує задачу.</big></b></p>
+	<big><p class="task_3"></p></big>
+	<script type="text/javascript">
+			var stage = "task_page";
+	</script>
+	<script type="text/javascript">
+			window.onload = main();
+	</script>
+	</body>
+</html>

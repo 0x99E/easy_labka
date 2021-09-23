@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+//  task1
+void task()
+{
+    int n;
+    bool id = true;
+    cout << "Введть кількість елементів списку" << endl;
+    cin >> n;
+    int list[n];
+    int uniclist[n];
+    cout << "Виведення елементів списку: " << " " << ;
+    for (int i = 0; i < n; i++)
+    {
+        list[i] = 1 + rand() % 30;
+        cout << list[i] << " " << ;
+        uniclist[i] = list[i];
+        for (int j = 0; j <= i; j++)
+        {
+            if (i != j && uniclist[i] == uniclist[j])
+            {
+                id = false;
+            }
+        }
+    }
+    if (id)
+    {
+        cout << "Усі елементи унікальні " << endl;
+    }
+    else {
+        cout << "Не усі елементи унікальні " << endl;
+    }
+}
+
+int main()
+{
+    int command;
+    cout << "MENU" << endl;
+    cout << " 1.Згенерувати список чисел, кількість елементів якого ввести з клавіатури. У списку чисел перевірити, чи всі елементи є унікальними, тобто кожне число зустрічається тільки один раз. Надрукувати згенерований список та повідомлення «Усі елементи унікальні» або «Не усі елементи унікальні»" << endl;
+    cout << " 2.Закінчити програму." << endl;
+    cout << "Введіть номер команди" << endl;
+    cin >> command;
+    if (command == 1)
+    {
+        task();
+    }else{
+        if (command == 2)
+        {
+            exit(0);
+        }
+    }
+
+}

@@ -1,0 +1,25 @@
+.spoiler-trigger{
+	color: #0b70db;
+	text-decoration: none;
+	padding-left: 15px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAANUlEQVQoU2PkLrj9n4EAYAQp+jpBlRGXOpA8hiJ0TaQrwuY2kDNINwnmcKLchO5LuHWEwgkAlO5FBwhFaI8AAAAASUVORK5CYII=) no-repeat 0 50%;
+}
+.spoiler-trigger.active{
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAKklEQVQoU2PkLrj9n4EAYAQp+jpBlRGXOpA8DRRhcxvIGTSyjqDvCIUTAEcINQcERZkIAAAAAElFTkSuQmCC);
+}
+.spoiler-trigger>span{
+	border-bottom: 1px dashed #0b70db;
+	padding:0 3px;
+}
+.spoiler-trigger:hover>span{
+	border-bottom-style: solid;
+}
+.spoiler-block{
+	display: none;
+}
+.spoiler-block1{
+	display: none;
+}
+.spoiler-block2{
+	display: none;
+}
