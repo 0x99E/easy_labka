@@ -1,4 +1,5 @@
-[![wakatime](https://wakatime.com/badge/github/0x99E/easy_labka.svg)](https://wakatime.com/badge/github/0x99E/easy_labka)/n
+[![wakatime](https://wakatime.com/badge/github/0x99E/easy_labka.svg)](https://wakatime.com/badge/github/0x99E/easy_labka)
+
 Привет от @mi_xxx/0x99E:
 
 Рад тебя видеть и у меня для тебя хорошие новости!
