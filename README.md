@@ -1,3 +1,4 @@
+![pic](https://i.imgur.com/FBfLet0.png)
 [![wakatime](https://wakatime.com/badge/github/0x99E/easy_labka.svg)](https://wakatime.com/badge/github/0x99E/easy_labka)
 
 Привет от @mi_xxx/0x99E:
@@ -12,10 +13,10 @@
 2)Открываем vars.js и меняем значения
 ОЧЕНЬ ВАЖНО не менять скобки! Все что внутри -- > тебе)
 Как ПРАВИЛЬНО записать:
-student_name: "Малява Андрій Дмитрович",
+student_name: "Малява Андрей",
 
 Как НЕПРАВИЛЬНО записать:
-student_name: Малява Андрій Дмитрович,
+student_name: Малява Андрей,
 
 Просто вставь текст в скобки.
 Молодец!
